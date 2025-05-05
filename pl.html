@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Street Light Monitoring System</title>
+    <link rel="stylesheet" href="ff.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #fafafa;
+        }
+        
+        .contai {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        header {
+            background-color: #f9fcff;
+            color: rgb(0, 0, 0);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .sss {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: rgb(1, 1, 1);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+        
+        .kuy {
+            display: inline-block;
+            background-color: #afd6f0;
+            color: rgb(1, 1, 1);
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .kuy:hover {
+            background-color: #5e6163;
+           
+        }
+        
+        .hiii {
+            background-color:#f8f9fa;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+        
+        .hiii h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #050606;
+        }
+        
+        .hiii p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #eaf2f3;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #010101;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+        .feature-card p{
+            color:#050606;
+        }
+        
+        .how-it-works {
+            padding: 80px 0;
+            background-color: #ecf0f1;
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 80px 0;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+            border: none;
+            border-radius: 20px;
+            
+            
+        }
+        
+        .step h3 {
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+        .step p{
+            color:#050606;
+        }
+        
+        .testimonials {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: '"';
+            font-size: 60px;
+            color: #3498db;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.2;
+        }
+        
+        .testimonial p {
+            margin-bottom: 20px;
+            font-style: normal;
+            color: #050606;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #1167be;
+        }
+        
+        footer {
+            background-color: #2a3b4c;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column  {
+            color: #fdfeff;
+            text-decoration: none;
+            transition: color 0.3s;
+            
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        .social-links img{
+            height: 80px;
+            width: 50px;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            color: white;
+            font-size: 14px;
+        }
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="contai">
+            <nav>
+                <div class="sss">SMART LIGHT</div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#get-started" class="kuy">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hiii">
+        <div class="contai">
+            <h1>Smart Street Light Monitoring System</h1>
+            <p>Optimize your lighting with IoT technology for energy efficiency and predictive maintenance</p>
+            <a href="#get-started" class="kuy">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="contai">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Energy Efficiency</h3>
+                    <p>Reduce energy consumption by adjusting light intensity based on real-time conditions</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Real-Time Monitoring</h3>
+                    <p>Monitor the operational status of individual lights efficiently</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Proactive Maintenance</h3>
+                    <p>Receive alerts for maintenance needs to ensure optimal performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="how-it-works" id="how-it-works">
+        <div class="contai">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Step 1: Data Collection</h3>
+                    <p>Ambient light and motion sensors collect data in real-time</p>
+                </div>
+                <div class="step">
+                    <h3>Step 2: Data Transmission</h3>
+                    <p>Data is transmitted to cloud for analysis</p>
+                </div>
+                <div class="step">
+                    <h3>Step 3: Dynamic Adjustment</h3>
+                    <p>Light intensity is adjusted based on analyzed data</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials" id="testimonials">
+        <div class="contai">
+            <h2 class="section-title">What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>This system has transformed our street lighting and reduced our energy costs significantly.</p>
+                    <div class="testimonial-author">- John Smith</div>
+                </div>
+                <div class="testimonial">
+                    <p>Proactive maintenance alerts have made our city safer and more efficient.</p>
+                    <div class="testimonial-author">- Jane Smith</div>
+                </div>
+                <div class="testimonial">
+                    <p>Real-time monitoring gives us peace of mind that our lighting is always optimal.</p>
+                    <div class="testimonial-author">- Alex Johnson</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="contai">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Units</h3>
+                    <ul>
+                        <li>Dashboard</li>
+                        <li>Features</li>
+                        <li>How it works</li>
+                        <li>Testimonials</li>
+                        <li>Get Started</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacts</h3>
+                    <ul>
+                        <li>Kigali, Kicukiro, Gahanga KX15RD</li>
+                        <li>0788653738 / 0788625450</li>
+                        <li>Smartstreetlightning@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <span class="social-links">
+                        <a style="color: antiquewhite;margin-left: 20px;" href=""><i class="fab fa-instagram" ></i></a>
+                        <a style="color: antiquewhite;margin-left: 20px;" href=""><i class="fab fa-twitter" ></i></a> 
+                        <a style="color: rgb(253, 253, 253);margin-left: 20px;" href=""><i class="fab fa-facebook" ></i></a>
+                        <a style="color: antiquewhite;margin-left: 20px;" href=""><i class="fab fa-google" ></i></a>
+                    </span>
+                </div>
+            </div>
+            <div class="copyright">
+                Copyright © 2024 Smart Street Light. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

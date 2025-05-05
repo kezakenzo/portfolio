@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <script>
+        function age(event) {
+            event.preventDefault(); 
+            var a = parseFloat(document.getElementById("Yob").value); 
+            var b = 2025 - a;
+            document.getElementById("age").innerHTML = "Your age is " + b;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="age(event)">
+        Date:
+        <input type="number" id="date"><br>
+        Year of birth:
+        <input type="number" id="Yob"><br>
+        <button type="submit">Submit</button>
+    </form>   
+    <p id="age"></p>
+</body>
+</html>
